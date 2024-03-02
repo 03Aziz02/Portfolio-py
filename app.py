@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/")
 def index():
@@ -11,5 +11,5 @@ def submit():
     # Handle form submission logic here
     return redirect(url_for('index'))
 
-if _name_ == "_main_":
-    app.run(host='0.0.0.0', port=2000, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0',port=2000,debug=True)
